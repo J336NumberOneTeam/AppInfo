@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace:命名空间   -->
+<mapper namespace="appinfo.dao.DataDictionaryMapper">
+    <!-- DataDictionary findflatFormList(String app_status);-->
+    <select id="findflatFormList" parameterType="String" resultType="dataDictionary">
+        select * from data_dictionary where typeCode=#{app_status}
+    </select>
+</mapper>
