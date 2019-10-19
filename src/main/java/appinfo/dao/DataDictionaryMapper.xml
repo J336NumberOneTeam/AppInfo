@@ -4,8 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- namespace:命名空间   -->
 <mapper namespace="appinfo.dao.DataDictionaryMapper">
-    <!-- DataDictionary findflatFormList(String app_status);-->
-    <select id="findflatFormList" parameterType="String" resultType="dataDictionary">
-        select * from data_dictionary where typeCode=#{app_status}
+    <!--List<DataDictionary> finflatFormList(String app_flatform);-->
+    <select id="finflatFormList" parameterType="String" resultType="dataDictionary">
+        select * from  data_dictionary where  typeCode = #{app_flatform}
     </select>
 </mapper>

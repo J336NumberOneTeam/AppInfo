@@ -4,47 +4,48 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
-    <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
-    </welcome-file-list>
-    <servlet>
-        <servlet-name>springMVC</servlet-name>
-        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-        <init-param>
-            <!--关联springmvc-servlet-->
+
+
+        <!-- 1.配置SpringMVC的前端控制器 -->
+        <servlet>
+            <servlet-name>springmvc</servlet-name>
+            <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+            <init-param>
+                <param-name>contextConfigLocation</param-name>
+                <param-value>classpath:SpringMVC-Servlet.xml</param-value>
+            </init-param>
+            <load-on-startup>1</load-on-startup>
+        </servlet>
+
+        <servlet-mapping>
+            <servlet-name>springmvc</servlet-name>
+            <url-pattern>/</url-pattern>
+        </servlet-mapping>
+
+        <!-- 解决POST请求中文乱码 -->
+        <filter>
+            <filter-name>characterEncodingFilter</filter-name>
+            <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+            <init-param>
+                <param-name>encoding</param-name>
+                <param-value>UTF-8</param-value>
+            </init-param>
+        </filter>
+
+        <filter-mapping>
+            <filter-name>characterEncodingFilter</filter-name>
+            <url-pattern>/*</url-pattern>
+        </filter-mapping>
+
+        <!-- 3.加载Spring其余的核心配置文件 -->
+        <listener>
+            <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+        </listener>
+
+        <!-- 指定自定义spring配置文件地址 -->
+        <context-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>classpath:SpringMVC-Servlet.xml</param-value>
+            <param-value>classpath:ApplicationContext.xml</param-value>
+        </context-param>
 
-        </init-param>
-
-        <!-- 在启动的时候加载出来一个servle控制器 -->
-        <load-on-startup>1</load-on-startup>
-        <async-supported>true</async-supported>
-    </servlet>
-    <!--映射拦截-->
-    <servlet-mapping>
-        <servlet-name>springMVC</servlet-name>
-        <url-pattern>/</url-pattern>
-    </servlet-mapping>
-    <!-- 解决post请求乱码 -->
-    <filter>
-        <filter-name>characterEncodingFilter</filter-name>
-        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
-        <init-param>
-            <param-name>encoding</param-name>
-            <param-value>UTF-8</param-value>
-        </init-param>
-    </filter>
-    <filter-mapping>
-        <filter-name>characterEncodingFilter</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>
-    <!-- 自行指定加载spring其余配置文件 -->
-    <context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:ApplicationContext.xml</param-value>
-    </context-param>
-    <listener>
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
 </web-app>

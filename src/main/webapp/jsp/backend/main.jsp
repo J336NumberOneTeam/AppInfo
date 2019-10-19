@@ -5,8 +5,7 @@
 	<div class="title_left">
 		<h3>
 			<h3>
-				<%--${userSession.userTypeName }--%>
-			欢迎你：${userSession.userName }<strong> | 角色：后台管理者账户</strong>
+			欢迎你：${userSession.userName }<strong> | 角色：${userSession.userTypeName }</strong>
 			</h3>
 		</h3>
 	</div>

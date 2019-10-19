@@ -39,7 +39,7 @@ public class AppInfo implements Serializable {
     private String categoryLevel1Name;//一级分类名称
     private String categoryLevel2Name;//二级分类名称
     private String categoryLevel3Name;//三级分类名称
-    private String statusName; //状态名称
+    private String statusName;//状态名称
     private String versionNo;//版本号
 
     public String getFlatformName() {
@@ -335,36 +335,42 @@ public class AppInfo implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        AppInfo that = (AppInfo) o;
+        AppInfo appInfo1 = (AppInfo) o;
 
-        if (id != that.id) return false;
-        if (softwareName != null ? !softwareName.equals(that.softwareName) : that.softwareName != null) return false;
-        if (apkName != null ? !apkName.equals(that.apkName) : that.apkName != null) return false;
-        if (supportRom != null ? !supportRom.equals(that.supportRom) : that.supportRom != null) return false;
-        if (interfaceLanguage != null ? !interfaceLanguage.equals(that.interfaceLanguage) : that.interfaceLanguage != null)
+        if (id != appInfo1.id) return false;
+        if (softwareName != null ? !softwareName.equals(appInfo1.softwareName) : appInfo1.softwareName != null)
             return false;
-        if (softwareSize != null ? !softwareSize.equals(that.softwareSize) : that.softwareSize != null) return false;
-        if (updateDate != null ? !updateDate.equals(that.updateDate) : that.updateDate != null) return false;
-        if (devId != null ? !devId.equals(that.devId) : that.devId != null) return false;
-        if (appInfo != null ? !appInfo.equals(that.appInfo) : that.appInfo != null) return false;
-        if (status != null ? !status.equals(that.status) : that.status != null) return false;
-        if (onSaleDate != null ? !onSaleDate.equals(that.onSaleDate) : that.onSaleDate != null) return false;
-        if (offSaleDate != null ? !offSaleDate.equals(that.offSaleDate) : that.offSaleDate != null) return false;
-        if (flatformId != null ? !flatformId.equals(that.flatformId) : that.flatformId != null) return false;
-        if (categoryLevel3 != null ? !categoryLevel3.equals(that.categoryLevel3) : that.categoryLevel3 != null)
+        if (apkName != null ? !apkName.equals(appInfo1.apkName) : appInfo1.apkName != null) return false;
+        if (supportRom != null ? !supportRom.equals(appInfo1.supportRom) : appInfo1.supportRom != null) return false;
+        if (interfaceLanguage != null ? !interfaceLanguage.equals(appInfo1.interfaceLanguage) : appInfo1.interfaceLanguage != null)
             return false;
-        if (downloads != null ? !downloads.equals(that.downloads) : that.downloads != null) return false;
-        if (createdBy != null ? !createdBy.equals(that.createdBy) : that.createdBy != null) return false;
-        if (creationDate != null ? !creationDate.equals(that.creationDate) : that.creationDate != null) return false;
-        if (modifyBy != null ? !modifyBy.equals(that.modifyBy) : that.modifyBy != null) return false;
-        if (modifyDate != null ? !modifyDate.equals(that.modifyDate) : that.modifyDate != null) return false;
-        if (categoryLevel1 != null ? !categoryLevel1.equals(that.categoryLevel1) : that.categoryLevel1 != null)
+        if (softwareSize != null ? !softwareSize.equals(appInfo1.softwareSize) : appInfo1.softwareSize != null)
             return false;
-        if (categoryLevel2 != null ? !categoryLevel2.equals(that.categoryLevel2) : that.categoryLevel2 != null)
+        if (updateDate != null ? !updateDate.equals(appInfo1.updateDate) : appInfo1.updateDate != null) return false;
+        if (devId != null ? !devId.equals(appInfo1.devId) : appInfo1.devId != null) return false;
+        if (appInfo != null ? !appInfo.equals(appInfo1.appInfo) : appInfo1.appInfo != null) return false;
+        if (status != null ? !status.equals(appInfo1.status) : appInfo1.status != null) return false;
+        if (onSaleDate != null ? !onSaleDate.equals(appInfo1.onSaleDate) : appInfo1.onSaleDate != null) return false;
+        if (offSaleDate != null ? !offSaleDate.equals(appInfo1.offSaleDate) : appInfo1.offSaleDate != null)
             return false;
-        if (logoPicPath != null ? !logoPicPath.equals(that.logoPicPath) : that.logoPicPath != null) return false;
-        if (logoLocPath != null ? !logoLocPath.equals(that.logoLocPath) : that.logoLocPath != null) return false;
-        if (versionId != null ? !versionId.equals(that.versionId) : that.versionId != null) return false;
+        if (flatformId != null ? !flatformId.equals(appInfo1.flatformId) : appInfo1.flatformId != null) return false;
+        if (categoryLevel3 != null ? !categoryLevel3.equals(appInfo1.categoryLevel3) : appInfo1.categoryLevel3 != null)
+            return false;
+        if (downloads != null ? !downloads.equals(appInfo1.downloads) : appInfo1.downloads != null) return false;
+        if (createdBy != null ? !createdBy.equals(appInfo1.createdBy) : appInfo1.createdBy != null) return false;
+        if (creationDate != null ? !creationDate.equals(appInfo1.creationDate) : appInfo1.creationDate != null)
+            return false;
+        if (modifyBy != null ? !modifyBy.equals(appInfo1.modifyBy) : appInfo1.modifyBy != null) return false;
+        if (modifyDate != null ? !modifyDate.equals(appInfo1.modifyDate) : appInfo1.modifyDate != null) return false;
+        if (categoryLevel1 != null ? !categoryLevel1.equals(appInfo1.categoryLevel1) : appInfo1.categoryLevel1 != null)
+            return false;
+        if (categoryLevel2 != null ? !categoryLevel2.equals(appInfo1.categoryLevel2) : appInfo1.categoryLevel2 != null)
+            return false;
+        if (logoPicPath != null ? !logoPicPath.equals(appInfo1.logoPicPath) : appInfo1.logoPicPath != null)
+            return false;
+        if (logoLocPath != null ? !logoLocPath.equals(appInfo1.logoLocPath) : appInfo1.logoLocPath != null)
+            return false;
+        if (versionId != null ? !versionId.equals(appInfo1.versionId) : appInfo1.versionId != null) return false;
 
         return true;
     }
