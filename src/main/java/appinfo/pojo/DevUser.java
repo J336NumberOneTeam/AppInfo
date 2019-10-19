@@ -123,18 +123,19 @@ public class DevUser implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        DevUser that = (DevUser) o;
+        DevUser devUser = (DevUser) o;
 
-        if (id != that.id) return false;
-        if (devCode != null ? !devCode.equals(that.devCode) : that.devCode != null) return false;
-        if (devName != null ? !devName.equals(that.devName) : that.devName != null) return false;
-        if (devPassword != null ? !devPassword.equals(that.devPassword) : that.devPassword != null) return false;
-        if (devEmail != null ? !devEmail.equals(that.devEmail) : that.devEmail != null) return false;
-        if (devInfo != null ? !devInfo.equals(that.devInfo) : that.devInfo != null) return false;
-        if (createdBy != null ? !createdBy.equals(that.createdBy) : that.createdBy != null) return false;
-        if (creationDate != null ? !creationDate.equals(that.creationDate) : that.creationDate != null) return false;
-        if (modifyBy != null ? !modifyBy.equals(that.modifyBy) : that.modifyBy != null) return false;
-        if (modifyDate != null ? !modifyDate.equals(that.modifyDate) : that.modifyDate != null) return false;
+        if (id != devUser.id) return false;
+        if (devCode != null ? !devCode.equals(devUser.devCode) : devUser.devCode != null) return false;
+        if (devName != null ? !devName.equals(devUser.devName) : devUser.devName != null) return false;
+        if (devPassword != null ? !devPassword.equals(devUser.devPassword) : devUser.devPassword != null) return false;
+        if (devEmail != null ? !devEmail.equals(devUser.devEmail) : devUser.devEmail != null) return false;
+        if (devInfo != null ? !devInfo.equals(devUser.devInfo) : devUser.devInfo != null) return false;
+        if (createdBy != null ? !createdBy.equals(devUser.createdBy) : devUser.createdBy != null) return false;
+        if (creationDate != null ? !creationDate.equals(devUser.creationDate) : devUser.creationDate != null)
+            return false;
+        if (modifyBy != null ? !modifyBy.equals(devUser.modifyBy) : devUser.modifyBy != null) return false;
+        if (modifyDate != null ? !modifyDate.equals(devUser.modifyDate) : devUser.modifyDate != null) return false;
 
         return true;
     }

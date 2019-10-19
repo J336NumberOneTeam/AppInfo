@@ -8,11 +8,12 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @Service
-public class DataDictionaryServiceImpl implements DataDictionaryService{
+public class DataDictionaryServiceImpl implements DataDictionaryService {
     @Resource
-   private DataDictionaryMapper dataDictionaryMapper;
+    private DataDictionaryMapper dataDictionaryMapper;
     @Override
-    public List<DataDictionary> findflatFormList(String app_status) {
-        return dataDictionaryMapper.findflatFormList(app_status);
+    public List<DataDictionary> finflatFormList(String app_flatform) {
+
+        return dataDictionaryMapper.finflatFormList(app_flatform);
     }
 }

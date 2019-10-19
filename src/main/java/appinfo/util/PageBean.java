@@ -31,6 +31,7 @@ public class PageBean<T> {
 		this.pageSize = pageSize;
 	}
 	public int getTotalPage() {
+
 		return totalPage=totalCount%pageSize==0?totalCount/pageSize:(totalCount/pageSize)+1;
 	}
 	public void setTotalPage(int totalPage) {

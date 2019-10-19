@@ -5,5 +5,5 @@ import appinfo.pojo.DataDictionary;
 import java.util.List;
 
 public interface DataDictionaryService {
-    List<DataDictionary> findflatFormList(String app_status);
+    List<DataDictionary> finflatFormList(String app_flatform);
 }

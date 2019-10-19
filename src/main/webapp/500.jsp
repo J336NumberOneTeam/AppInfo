@@ -29,7 +29,7 @@
           <div class="col-middle">
             <div class="text-center">
               <h1 class="error-number">500</h1>
-              <h2>系统错误，请重试！</h2>
+              <h2>系统错误,请重试</h2>
               <p>请返回到 <a href="javascript:history.go(-1)">返回上一级</a>
               </p>
             </div>

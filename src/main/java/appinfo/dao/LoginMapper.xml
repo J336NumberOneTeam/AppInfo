@@ -4,14 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- namespace:命名空间   -->
 <mapper namespace="appinfo.dao.LoginMapper">
-
-    <!--DevUser doLogin(String devCode, String devPassword);开发者登录-->
+    <!--DevUser doLogin(String devCode, String devPassword);-->
     <select id="doLogin" resultType="devUser">
-        select * from dev_user where devCode=#{devCode} and devPassword=#{devPassword}
-    </select>
-
-    <!--  BackendUser managerLogin(@Param("userCode") String userCode,@Param("userPassword") String userPassword);管理者登录-->
-    <select id="managerLogin" resultType="backendUser">
-        select * from backend_user where userCode=#{userCode} and userPassword=#{userPassword}
+        select * from  dev_user where  devCode = #{name} and devPassword = #{pwd}
     </select>
 </mapper>
